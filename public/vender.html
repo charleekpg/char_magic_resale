@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publicar entradas — Reventa Mundial 2026</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <h1>Reventa Mundial 2026</h1>
+    <nav>
+      <a class="btn-nav" href="/">Ver entradas</a>
+      <a class="btn-nav active" href="/vender.html">Publicar entradas</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h2>Publicá tus entradas</h2>
+    <p class="muted">Tu publicación se elimina automáticamente a las 24 hs. Si seguís sin vender, podés volver a cargarla.</p>
+  </section>
+
+  <form id="sell-form" class="sell-form">
+    <div class="card required">
+      <label for="match_num">Partido <span class="req">*</span></label>
+      <p class="hint">Buscá y elegí el partido para el cual estás vendiendo.</p>
+      <input id="match-search" type="search" placeholder="Buscá por equipo, sede, ciudad o número...">
+      <select id="match_num" name="match_num" size="8" required></select>
+      <div id="match-detail" class="match-detail"></div>
+    </div>
+
+    <div class="card required">
+      <label for="tickets">¿Cuántas entradas? <span class="req">*</span></label>
+      <p class="hint">Solo números.</p>
+      <input id="tickets" name="tickets" type="number" min="1" max="20" required>
+    </div>
+
+    <div class="card required">
+      <label for="category">Categoría <span class="req">*</span></label>
+      <select id="category" name="category" required>
+        <option value="">Elegí una opción</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <label for="block">Sector / Block (Zona)</label>
+      <input id="block" name="block" type="text" maxlength="30">
+    </div>
+
+    <div class="card">
+      <label for="row">Fila</label>
+      <input id="row" name="row" type="text" maxlength="30">
+    </div>
+
+    <div class="card">
+      <label for="seats">Asientos</label>
+      <p class="hint">
+        <strong>Listá los asientos separados por coma.</strong>
+        Ejemplos: <code>5</code> · <code>6, 7</code> · <code>1, 2, 3, 4</code> · <code>10, 11, 12</code>.
+      </p>
+      <input id="seats" name="seats" type="text" maxlength="120" placeholder="Ej: 6, 7, 8">
+    </div>
+
+    <div class="card required">
+      <label for="price_usd">Precio por entrada (USD) <span class="req">*</span></label>
+      <p class="hint">Solo números. Usá USD como moneda.</p>
+      <input id="price_usd" name="price_usd" type="number" min="1" step="0.01" required>
+    </div>
+
+    <div class="card required">
+      <label for="seller_name">Tu nombre <span class="req">*</span></label>
+      <input id="seller_name" name="seller_name" type="text" maxlength="80" required>
+    </div>
+
+    <div class="card required">
+      <label for="whatsapp">WhatsApp <span class="req">*</span></label>
+      <p class="hint">Incluí el código de país. Ejemplo: <code>+5491122223333</code>.</p>
+      <input id="whatsapp" name="whatsapp" type="tel" placeholder="+54..." required>
+    </div>
+
+    <div class="card">
+      <label for="comments">Comentarios</label>
+      <p class="hint">Promos, condiciones de pago, lugar de encuentro, etc.</p>
+      <textarea id="comments" name="comments" maxlength="500" rows="3"></textarea>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn-primary">Publicar entrada</button>
+      <span id="form-status" class="muted"></span>
+    </div>
+  </form>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <small>Las publicaciones expiran en 24 hs.</small>
+  </div>
+</footer>
+
+<script src="/sell.js"></script>
+</body>
+</html>

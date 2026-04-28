@@ -1,0 +1,15 @@
+{
+  "name": "worldcup-tickets",
+  "version": "1.0.0",
+  "description": "Marketplace simple de reventa de entradas para el Mundial 2026",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

@@ -1,0 +1,7 @@
+node_modules/
+data/tickets.json
+data/tickets.json.tmp
+data/tickets.db
+data/tickets.db-*
+*.log
+.DS_Store

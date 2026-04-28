@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reventa Mundial 2026 — Entradas disponibles</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <h1>Reventa Mundial 2026</h1>
+    <nav>
+      <a class="btn-nav active" href="/">Ver entradas</a>
+      <a class="btn-nav" href="/vender.html">Publicar entradas</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h2>Entradas disponibles</h2>
+    <p class="muted">
+      Las publicaciones se borran automáticamente a las 24 hs de creadas.
+      Los partidos se muestran ordenados por número de partido.
+      Dentro de cada partido, las entradas se ordenan por categoría y precio.
+    </p>
+  </section>
+
+  <section class="filters">
+    <label>
+      Buscar partido:
+      <input id="filter-text" type="search" placeholder="Equipo, sede, ciudad o número...">
+    </label>
+    <label>
+      Etapa:
+      <select id="filter-stage">
+        <option value="">Todas las etapas</option>
+        <option>Fase de Grupos</option>
+        <option>Dieciseisavos de Final</option>
+        <option>Octavos de Final</option>
+        <option>Cuartos de Final</option>
+        <option>Semifinales</option>
+        <option>Tercer Puesto</option>
+        <option>Final</option>
+      </select>
+    </label>
+    <label>
+      País sede:
+      <select id="filter-country">
+        <option value="">Todos</option>
+        <option>México</option>
+        <option>EE.UU.</option>
+        <option>Canadá</option>
+      </select>
+    </label>
+    <label class="filter-check">
+      <input id="filter-only-available" type="checkbox">
+      <span>Solo partidos con entradas disponibles</span>
+    </label>
+  </section>
+
+  <section id="match-list" class="match-list">
+    <p class="muted">Cargando...</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <small>Plataforma comunitaria de reventa entre particulares · Las publicaciones expiran en 24 hs.</small>
+  </div>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>
